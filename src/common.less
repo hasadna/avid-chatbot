@@ -1,0 +1,66 @@
+@bluegreen: #00807c;
+@faded-bluegreen: #e5f2f1;
+@charcoal: #2c3c3b;
+@aubergine: #480a35;
+@seafoam-blue: #6ededa;
+@cool-grey: #89a9a8;
+@pale-blue: #d9f2f1;
+@white: #f6f6f6;
+
+
+.cta {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    margin-top: auto;
+    width: 100%;
+
+    .button {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 18px;
+        border: solid 1px @seafoam-blue;                
+        background-color: @pale-blue;
+        font-size: 18px;
+        color: @bluegreen;
+        text-align: center;
+
+        font-weight: normal;
+        padding: 4px 20px;
+        margin: 10px 0;
+        cursor: pointer;
+        width: 100%;
+        text-decoration: none;
+
+        img {
+            margin: 0 5px;   
+        }
+
+    }
+
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(1px,1px,1px,1px);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    margin-top: -1px;
+    margin-bottom: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal;
+}
+
+.placeholder-tx {
+    display: none;
+}

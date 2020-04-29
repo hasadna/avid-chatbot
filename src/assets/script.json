@@ -1,0 +1,146 @@
+{
+  "s": [
+    {
+      "description": "Main Script",
+      "name": "main",
+      "snippets": [
+        {
+          "name": "default",
+          "steps": [
+            {
+              "goto": "intro",
+              "uid": "a06dfaf7c2"
+            },
+            {
+              "goto": "end-of-conversation",
+              "uid": "e9acb54132"
+            }
+          ],
+          "uid": "898235e117"
+        },
+        {
+          "name": "intro",
+          "steps": [
+            {
+              "say": {
+                ".tx": {
+                  "_": "שלום, חבר!",
+                  "en": "Hello stranger!"
+                }
+              },
+              "uid": "c2636cc0d2"
+            },
+            {
+              "uid": "c107755a05",
+              "wait": {
+                "options": [
+                  {
+                    "show": {
+                      ".tx": {
+                        "_": "שלום",
+                        "en": "Hi"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "uid": "ec80178184"
+        },
+        {
+          "name": "end-of-conversation",
+          "steps": [
+            {
+              "say": {
+                ".tx": {
+                  "_": "להתראות!",
+                  "en": "Bye bye!"
+                }
+              },
+              "uid": "9252997c8c"
+            }
+          ],
+          "uid": "55af815d33"
+        }
+      ]
+    },
+    {
+      "keys": [
+        {
+          "name": "siteTitle",
+          "show": {
+            ".tx": {
+              "_": "צטבוט לדוגמה",
+              "en": "Sample Chatbot"
+            }
+          }
+        },
+        {
+          "name": "mainGreeting",
+          "show": {
+            ".tx": {
+              "_": "שלום,<br/>זהו צטבוט לדוגמה",
+              "en": "Welcome<br/>This is Sample Chatbot"
+            }
+          }
+        },
+        {
+          "name": "mainCTA",
+          "show": {
+            ".tx": {
+              "_": "התחלת השיחוח",
+              "en": "Start the chat"
+            }
+          }
+        },
+        {
+          "name": "moreInfoCTA",
+          "show": {
+            ".tx": {
+              "_": "מידע נוסף",
+              "en": "More Info"
+            }
+          }
+        },
+        {
+          "name": "mainText",
+          "show": {
+            ".tx": {
+              "_": "<p>זהו צטבוט לדוגמה</p>\n<p>כל הטקסט כאן ניתן להתאמה אישית</p>\n",
+              "en": "<p>This is a sample chatbot</p>\n<p>All the text here can be customized</p>\n"
+            }
+          }
+        },
+        {
+          "name": "moreInfo",
+          "show": {
+            ".tx": {
+              "_": "<h2>עוד מידע על הצטבוט לדוגמה</h2>\n<p>גם הטקסט כאן ניתן להתאמה אישית</p>\n",
+              "en": "<h2>More information about the bot</h2>\n<p>All the text here can also be customized</p>\n"
+            }
+          }
+        },
+        {
+          "name": "backCTA",
+          "show": {
+            ".tx": {
+              "_": "בחזרה לצ׳ט",
+              "en": "Back to the bot"
+            }
+          }
+        },
+        {
+          "name": "inputPlaceholder",
+          "show": {
+            ".tx": {
+              "_": "הקלידו כאן",
+              "en": "Type Here"
+            }
+          }
+        }
+      ],
+      "name": "config"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+- description: Main Script
+  name: main
+  snippets:
+    - name: default
+      steps:
+      - goto: intro
+      - goto: end-of-conversation
+    
+    - name: intro
+      steps: 
+        - say:
+            .tx:
+              en: Hello stranger!
+              _: שלום, חבר!
+        - wait:
+            options:
+              - show:
+                  .tx:
+                    en: Hi
+                    _: שלום
+    
+    - name: end-of-conversation
+      steps:
+        - say:
+            .tx:
+              en: Bye bye!
+              _: להתראות!
+
+
+- name: config ## <-- keep me last!
+  keys:
+    - name: siteTitle
+      show:
+        .tx:
+          en: Sample Chatbot
+          _: צטבוט לדוגמה
+    - name: mainGreeting
+      show:
+        .tx:
+          en: Welcome<br/>This is Sample Chatbot
+          _: שלום,<br/>זהו צטבוט לדוגמה
+    - name: mainCTA
+      show:
+        .tx:
+          en: Start the chat
+          _: התחלת השיחוח
+    - name: moreInfoCTA
+      show:
+        .tx:
+          en: More Info
+          _: מידע נוסף
+    - name: mainText
+      show:
+        .tx:
+          en: |
+            <p>This is a sample chatbot</p>
+            <p>All the text here can be customized</p>
+          _: |
+            <p>זהו צטבוט לדוגמה</p>
+            <p>כל הטקסט כאן ניתן להתאמה אישית</p>
+    - name: moreInfo
+      show:
+        .tx:
+          en: |
+            <h2>More information about the bot</h2>
+            <p>All the text here can also be customized</p>
+          _: |
+            <h2>עוד מידע על הצטבוט לדוגמה</h2>
+            <p>גם הטקסט כאן ניתן להתאמה אישית</p>
+    - name: backCTA
+      show:
+        .tx:
+          en: Back to the bot
+          _: בחזרה לצ׳ט
+
+    - name: inputPlaceholder
+      show:
+        .tx:
+          en: Type Here
+          _: הקלידו כאן
+
