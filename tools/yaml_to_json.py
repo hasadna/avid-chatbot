@@ -8,6 +8,7 @@ import glob
 import yaml
 import json
 import requests
+import sys
 
 def calc_hash(s):
     ret = md5(s.encode('utf8')).hexdigest()[:10]
@@ -61,13 +62,22 @@ def assign_ids(x, stack=[]):
         return
 
 if __name__=='__main__':
-    f_in = Path('scripts/script.yaml')
-    scripts = yaml.load(f_in.open())
+    if len(sys.argv) > 1:
+        f_in = Path(sys.argv[1])
+    else:
+        f_in = Path('scripts/script.yaml')
+
+    if len(sys.argv) > 2:
+        f_out = Path(sys.argv[2])
+    else:
+        f_out = Path('src/assets/script.json')
+
+    scripts = yaml.load(f_in.open(), Loader = yaml.SafeLoader)
     assign_ids(scripts, [str(f_in)])
 
     scripts = dict(s=scripts)
-    f_out = Path('src/assets/script.json')
     f_out.open('w').write(json.dumps(
         scripts, ensure_ascii=False, sort_keys=True, indent=2)
+
     )
 
