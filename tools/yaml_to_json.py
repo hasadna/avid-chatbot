@@ -74,7 +74,6 @@ if __name__=='__main__':
 
     scripts = yaml.load(f_in.open(encoding="utf8"), Loader = yaml.SafeLoader)
     assign_ids(scripts, [str(f_in)])
-
     scripts = dict(s=scripts)
     f_out.open('w', encoding="utf8").write(json.dumps(
         scripts, ensure_ascii=False, sort_keys=True, indent=2)
